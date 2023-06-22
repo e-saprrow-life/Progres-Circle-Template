@@ -1,0 +1,4 @@
+// font-family ... file name ... weight ... style 
+@include font("NotoSans", "NotoSans-BoldItalic", "700", "italic");
+@include font("NotoSans", "NotoSans-Italic", "400", "italic");
+@include font("NotoSans", "NotoSans-Regular", "400", "normal");

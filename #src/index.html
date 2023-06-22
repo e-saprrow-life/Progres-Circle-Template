@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+'title':'Site Name'
+}) 
+<body>
+	<div class="wrapper">
+		@@include('_header.html')
+		<main class="page">
+			<div class="circle" data-percents="30">
+				<div class="circle__rail"></div>
+				<div class="circle__rate"></div>
+				<div class="circle__left circle__left_off"></div>
+				<div class="circle__right circle__right_off"></div>
+				<div class="circle__value"></div>
+			</div>
+		</main>
+		@@include('_footer.html')
+	</div>
+	@@include('_scripts.html')
+</body>
+</html>

@@ -1,0 +1,139 @@
+.page {
+    background-color: #aeaeae;
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2000px;
+}
+
+$border_weight: 50px;
+$rail_color: #a9a9a9;
+$progress_color: rgb(0, 255, 21);
+$text_background: #ffffff;
+
+
+.circle {
+    height: 400px;
+    width: 400px;
+    position: relative;
+    background-color: #a2cea4;
+    z-index: 10;
+
+
+
+    &__rate {
+        position: relative;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 50%;
+        overflow: hidden;
+        transform: rotate(0deg);
+        transform-origin: right center;
+        z-index: 12;
+        &::before {
+            content:'';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 200%;
+            border-radius: 50%;
+            border: $border_weight solid $progress_color;
+        }
+    }
+
+
+
+    &__rail {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        background-color: rgba(61, 150, 108, 0.466);
+        border: $border_weight solid $rail_color;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            background-color: $text_background;
+        }
+    }
+
+
+
+    &__left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 50%;
+        overflow: hidden;
+        z-index: 12;
+        &::before {
+            content:'';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 200%;
+            border-radius: 50%;
+            border: $border_weight solid $rail_color;
+        }
+       
+    }
+
+
+
+    &__right{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 50%;
+        overflow: hidden;
+        &::before {
+            content:'';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 200%;
+            border-radius: 50%;
+            border: $border_weight solid $rail_color;
+        }
+    }
+
+
+
+    &__value {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        font-size: 100px;
+        z-index: 15;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ._show-side {
+        &::before {
+            border: $border_weight solid $progress_color;
+        }
+    }
+}

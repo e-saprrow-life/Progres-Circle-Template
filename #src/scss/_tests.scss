@@ -1,0 +1,23 @@
+.block {
+    display: flex;
+    &__left {
+        flex: 1 1 66.66%;
+        background-color: red;
+    }
+
+    &__right {
+        flex: 1 1 33.33%;
+        background-color: green;
+    }
+
+    &__right-top {
+        max-height: 100%;
+        background-color: yellow;
+        padding: 30px;
+    }
+
+    &__right-bottom {
+        background-color: blue;
+        padding-top: 38%;
+    }
+}
